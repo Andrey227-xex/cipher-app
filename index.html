@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <script type="module" defer src="./index.js"></script>
 </head>
 <body>
     <header class="header"> <!-- шапка -->
         <h1>Шифрование текстовых сообщений</h1> <!-- заголовок -->
-        <button class="btn">Тема 🌞</button> <!-- кнопка меняющая тему -->
+        <button id="theme" class="btn">Тема 🌞</button> <!-- кнопка меняющая тему -->
     </header>
     
     <main class="main"> <!-- основа -->
@@ -33,7 +34,7 @@
                 <li>Шифр Атбаш: зеркальное отображение алфавита. (Примеры: А↔Я, Б↔Ю, В↔Э)</li>
             </ul>
 
-            <p>Статус: ✅ Готов к работе</p>
+            <p id="status">Статус: ✅ Готов к работе</p>
 
         </section>
 
@@ -53,13 +54,13 @@
             </div>
 
             <!-- выпадающий список с выбором шифра -->
-            <select>
+            <select class="control__select">
                 <option value="">Выберите шифр</option>
                 <option value="Цезарь">Шифр Цезарь</option>
                 <option value="Атбаш">Шифр Атбаш</option>
             </select>
 
-            <textarea class="control__text-input-field" placeholder="Введите текст" disabled></textarea> <!-- поле для ввода текстовых сообщений -->
+            <textarea class="control__text-input-field" placeholder="Введите текст" ></textarea> <!-- поле для ввода текстовых сообщений -->
 
             <input id="uploadFile" type="file" style="display: none;"> <!-- кнопка для выбора файла (скрыта) -->
             <button class="btn">📂 Загрузить файл</button>
