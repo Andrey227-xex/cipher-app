@@ -177,3 +177,32 @@ body {
 .result__text-output-field::placeholder {
     color: var(--placeholder-color);
 }
+
+
+/* стили для поля ввода сдвига (динамический тег) */
+.alphabet-shift-field {
+    border: 1px solid  var(--border-color);
+    background-color: var(--elem-bg-color);
+    color: var(--text-color);
+}
+
+
+/* стили для плейсхолдера (подсказки) в поле ввода сдвига */
+.alphabet-shift-field::placeholder {
+    color: var(--placeholder-color);
+}
+
+
+/* стили для кнопки сохранения сдвига (динамический тег) */
+.btn-save {
+    border: 1px solid var(--border-color);
+    background-color: var(--elem-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+}
+
+
+.btn-save:hover {
+    background-color: rgb(176, 176, 249);
+}

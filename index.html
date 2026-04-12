@@ -38,7 +38,7 @@
 
         </section>
 
-        <section class="control"> <!-- секция 2 (выбор шифра, выбор языка, работа с текстовым сообщением) -->
+        <section id="control" class="control"> <!-- секция 2 (выбор шифра, выбор языка, работа с текстовым сообщением) -->
 
             <div class="control__title"> <!-- блок с заголовком секции -->
                 <h2>Управление</h2>
@@ -54,13 +54,13 @@
             </div>
 
             <!-- выпадающий список с выбором шифра -->
-            <select class="control__select">
+            <select id="select" class="control__select">
                 <option value="">Выберите шифр</option>
                 <option value="Цезарь">Шифр Цезарь</option>
                 <option value="Атбаш">Шифр Атбаш</option>
             </select>
 
-            <textarea class="control__text-input-field" placeholder="Введите текст" ></textarea> <!-- поле для ввода текстовых сообщений -->
+            <textarea id="textInputField" class="control__text-input-field" placeholder="Введите текст" disabled ></textarea> <!-- поле для ввода текстовых сообщений -->
 
             <input id="uploadFile" type="file" style="display: none;"> <!-- кнопка для выбора файла (скрыта) -->
             <button class="btn">📂 Загрузить файл</button>
