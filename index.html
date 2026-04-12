@@ -53,8 +53,8 @@
 
             <textarea id="textInput" class="control__text-input-field" placeholder="Введите текст" disabled ></textarea> <!-- поле для ввода текстовых сообщений -->
 
-            <input id="uploadFile" type="file" style="display: none;"> <!-- кнопка для выбора файла (скрыта) -->
-            <button class="btn">📂 Загрузить файл</button>
+            <input id="loadFileInput" type="file" style="display: none;"> <!-- кнопка для выбора файла (скрыта) -->
+            <button id="loadFileButton" class="btn">📂 Загрузить файл</button> <!-- кнопка для выбора файла -->
 
             <button id="btnEncryptIt" class="btn">🔒 Зашифровать</button> <!-- кнопка для шифрования текстовых сообщений -->
             <button id="btnDecrypt" class="btn">🔓 Расшифровать</button> <!-- кнопка для расшифрования текстовых сообщений -->
@@ -69,7 +69,7 @@
 
             <textarea id="textOutput" class="result__text-output-field" placeholder="Результат" readonly></textarea> <!-- поле для вывода (зашифрованных или расшифрованных) текстовых сообщений -->
 
-            <button class="btn">📂 Сохранить в файл</button> <!-- кнопка сохранения данных в файл -->
+            <button id="btnSaveToFile" class="btn">📂 Сохранить в файл</button> <!-- кнопка сохранения данных в файл -->
 
         </section>
 
