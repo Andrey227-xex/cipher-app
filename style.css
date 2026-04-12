@@ -89,15 +89,6 @@ body {
 }
 
 
-/* стили для контейнера с радио кнопками в секции с управлением */
-.control__container {
-    border-bottom: 1px solid var(--border-color);
-    text-align: center;
-    margin-left: calc(var(--indent) * -1);  /* внешний отступ -10px */
-    margin-bottom: 10px;
-}
-
-
 /* стили для выпадающего списка в секции с управлением */
 .control__select {
     border: 1px solid var(--border-color);

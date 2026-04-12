@@ -44,15 +44,6 @@
                 <h2>Управление</h2>
             </div>
 
-            <div class="control__container"> <!-- контейнер (нужен чтобы элементы распологались блочно) -->
-                <!-- радио кнопки выбора языка -->
-                <input id="Russian" type="radio" name="language" value="ru"> <!-- русский язык -->
-                <label for="Russian">Русский язык</label> <!-- связывает label с input -->
-
-                <input id="English" type="radio" name="language" value="en"> <!-- английский язык -->
-                <label for="English">Английский язык</label> <!-- связывает label с input -->
-            </div>
-
             <!-- выпадающий список с выбором шифра -->
             <select id="select" class="control__select">
                 <option value="">Выберите шифр</option>
@@ -60,13 +51,13 @@
                 <option value="Атбаш">Шифр Атбаш</option>
             </select>
 
-            <textarea id="textInputField" class="control__text-input-field" placeholder="Введите текст" disabled ></textarea> <!-- поле для ввода текстовых сообщений -->
+            <textarea id="textInput" class="control__text-input-field" placeholder="Введите текст" disabled ></textarea> <!-- поле для ввода текстовых сообщений -->
 
             <input id="uploadFile" type="file" style="display: none;"> <!-- кнопка для выбора файла (скрыта) -->
             <button class="btn">📂 Загрузить файл</button>
 
-            <button class="btn">🔒 Зашифровать</button> <!-- кнопка для шифрования текстовых сообщений -->
-            <button class="btn">🔓 Расшифровать</button> <!-- кнопка для расшифрования текстовых сообщений -->
+            <button id="btnEncryptIt" class="btn">🔒 Зашифровать</button> <!-- кнопка для шифрования текстовых сообщений -->
+            <button id="btnDecrypt" class="btn">🔓 Расшифровать</button> <!-- кнопка для расшифрования текстовых сообщений -->
 
         </section>
 
@@ -76,7 +67,7 @@
                 <h2>Результат</h2>
             </div>
 
-            <textarea class="result__text-output-field" placeholder="Результат" readonly></textarea> <!-- поле для вывода (зашифрованных или расшифрованных) текстовых сообщений -->
+            <textarea id="textOutput" class="result__text-output-field" placeholder="Результат" readonly></textarea> <!-- поле для вывода (зашифрованных или расшифрованных) текстовых сообщений -->
 
             <button class="btn">📂 Сохранить в файл</button> <!-- кнопка сохранения данных в файл -->
 

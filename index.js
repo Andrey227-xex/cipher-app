@@ -1,12 +1,15 @@
 // ОСНОВНОЙ ФАЙЛ
 
 import { changingTheTopic } from "./themes/changing-the-topic.js";  // импортируем функцию меняющая тему
-import { caesarCipher, atbashCipher } from "./working-with-ciphers/choosing-a-cipher.js"; // импортируем функции шифров
+import { caesarCipher, atbashCipher } from "./working-with-ciphers/ciphers.js"; // импортируем функции шифров
+import { encryptAndDecryptCaesar } from "./working-with-ciphers/encrypt-and-decrypt-Caesar.js" // импортируем функцию зашифровать и расшифровать (для шифра Цезаря)
+import { encryptAndDecryptAtbash } from "./working-with-ciphers/encrypt-and-decrypt-Atbash.js" // импортируем функцию зашифровать и расшифровать (для шифра Атбаш)
 
 const theme = document.getElementById("theme"); // кнопка с темами
-const languages = document.querySelectorAll("#Russian, #English"); // радио кнопки с языками
 const select = document.getElementById("select"); // выпадающий список с шифрами
-const status = document.getElementById("status"); // статус
+
+const btnEncryptIt = document.getElementById("btnEncryptIt"); // кнопка шифрования
+const btnDecrypt = document.getElementById("btnDecrypt"); // кнока расшифровать
 window.settings = {}; // настройки и данные (глобальная переменная)
 
 
@@ -29,50 +32,51 @@ window.addEventListener("load", () => {
 theme.addEventListener("click", changingTheTopic);
 
 
-// перебираем радио кнопки
-languages.forEach(lang => {
-    // добавляем обработчик радио кнопка с выбором языка
-    lang.addEventListener("change", () => {
-        settings.language = lang.value;  // в настройке language будет хранится выбранный язык
+// добаляем обработчик выпадающему списку с шифрами
+select.addEventListener("change", () => {
 
-        languages.forEach(lang => {
-            lang.setAttribute("disabled", true);  // делаем радио кнопки неактивными
-        })
+    // если пользователь выбрал шифр Цезарь
+    if (select.value === "Цезарь") {
+        caesarCipher(); 
+    }
 
-        const label = document.querySelector(`label[for="${lang.id}"]`);
-        label.style.color="red";  // красим выбранный язык в красный цвет
-
-        // русский язык
-        if (label.textContent === "Русский язык") {
-            status.textContent = "Статус: ✅ Выбран русский язык"; // обновляю статус
-        }
-
-        // английский язык
-        else {
-            status.textContent = "Статус: ✅ Выбран английский язык"; // обновляю статус
-        }
-    })
+    // если пользователь выбрал шифр Атбаш
+    else if (select.value === "Атбаш") {
+        atbashCipher();
+    }
 })
 
 
-// добаляем обработчик выпадающему списку с шифрами
-select.addEventListener("change", () => {
-    // если выбран язык
-    if (settings.language) {
-        // если пользователь выбрал шифр Цезарь
-        if (select.value === "Цезарь") {
-            caesarCipher(); 
-        }
+// добавляем обработчик кнопке шифрования
+btnEncryptIt.addEventListener("click", () => {
+    settings.encryptedText = ""; // сбрасываем текст
+    settings.mode = "Зашифровать"; // задаем режим
 
-        // если пользователь выбрал шифр Атбаш
-        else if (select.value === "Атбаш") {
-            atbashCipher();
-        }
+    // если выбран шифр Цезаря
+    if (settings.type === "Цезарь") {
+        encryptAndDecryptCaesar();
     }
-    // язык не выбран
-    else {
-        alert("Выберите язык!");
-        select.value = "";  // сбрасываем 
+
+    // если выбран шифр Атбаш
+    if (settings.type === "Атбаш") {
+        encryptAndDecryptAtbash();
+    }
+});
+
+
+// добавляем обработчик кнопке расшифрования
+btnDecrypt.addEventListener("click", () => {
+    settings.encryptedText = ""; // сбрасываем текст
+    settings.mode = "Расшифровать"; // задаем режим
+
+    // если выбран шифр Цезаря
+    if (settings.type === "Цезарь") {
+        encryptAndDecryptCaesar();
+    }
+
+    // если выбран шифр Атбаш
+    if (settings.type === "Атбаш") {
+        encryptAndDecryptAtbash();
     }
 })
 
@@ -81,7 +85,6 @@ select.addEventListener("change", () => {
 function initialization() {
     settings.type = null;  // тип шифра
     settings.mode = null;  // режим
-    settings.language = null;  // язык
     settings.encryptedText = "";  // зашифрованное или расшифрованное текстовое сообщение
     settings.alphabetIsRussian = ["а","б","в","г","д","е","ё","ж","з","и","й","к","л","м","н","о","п","р","с","т","у","ф","х","ц","ч","ш","щ","ъ","ы","ь","э","ю","я"];  // массив с русским алфавитом
     settings.alphabetIsEnglish = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];  // массив с английским алфавитом

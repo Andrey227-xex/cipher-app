@@ -1,5 +1,3 @@
-// ФАЙЛ С ФУНКЦИЕЙ КОТОРАЯ МЕНЯЕТ ТЕМУ
-
 const theme = document.getElementById("theme");  // кнопка с темами
 const status = document.getElementById("status");  // статус
 
