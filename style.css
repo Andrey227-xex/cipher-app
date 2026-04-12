@@ -1,0 +1,131 @@
+/* определение переменных (глобальные переменные) */
+:root {
+    /* переменные для светлой темы */
+    --bg-color: white;  /* фон */
+    --text-color: black;  /* цвет текста */
+
+    /* переменная для отступов (внешних и внутренних) в секциях */
+    --indent: 10px;
+}
+
+
+/* стили для всех тегов */
+* {
+    box-sizing: border-box;  /* все отступы и бордеры будут вкл в ширину */
+}
+
+
+/* стили для шапки */
+.header {
+    max-width: 1810px;
+    border: 1px solid black;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+/* стили для основы */
+.main {
+    max-width: 1820px;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    gap: 5px
+}
+
+
+/* стили для первой секции с описанием */
+.description {
+    width: 600px;
+    border: 1px solid black;
+    font-size: 20px;
+    padding-left: var(--indent); /* внутренний отступ 10px */
+}
+
+
+/* стили для заголовка секции с описанием */
+.description__title {
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin-left: calc(var(--indent) * -1);  /* внешний отступ -10px */
+}
+
+
+/* стили для второй секции с управлением */
+.control {
+    width: 600px;
+    border: 1px solid black;
+    font-size: 20px;
+    padding-left: var(--indent); /* внутренний отступ 10px */
+}
+
+
+/* стили для заголовка секции c управлением */
+.control__title {
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin-left: calc(var(--indent) * -1);  /* внешний отступ -10px */
+}
+
+
+/* стили для контейнера с радио кнопками в секции с управлением */
+.control__container {
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin-left: calc(var(--indent) * -1);  /* внешний отступ -10px */
+    margin-bottom: 10px;
+}
+
+
+/* стили для поля ввода текста в секции c управлением */
+.control__text-input-field {
+    width: 98%;
+    height: 140px;
+    margin: 100px 0px 20px 0px;  /* внешние отступы (top, right, bottom, left) */
+    font-size: 20px;  /* размер текста */
+    display: block;  /* делаем поле блочным */
+    resize: none;  /* запрещаем менять размер полю (растягивать) */
+}
+
+
+/* стили для кнопки шифрования в секции с управлением */
+.btn {
+    padding: 5px;
+    background-color: white;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+}
+
+
+.btn:hover {
+    background-color: rgb(176, 176, 249);
+}
+
+
+/* стили для третьей секции с результатом */
+.result {
+    width: 600px;
+    border: 1px solid black;
+    font-size: 20px;
+    padding-left: var(--indent); /* внутренний отступ 10px */
+}
+
+
+/* стили для заголовка секции с результатом */
+.result__title {
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin-left: calc(var(--indent) * -1);  /* внешний отступ -10px */
+}
+
+
+/* стили для поля вывода в секции с результатом */
+.result__text-output-field {
+    width: 98%;
+    height: 140px;
+    margin: 20px 0px 10px 0px;  /* внешние отступы (top, right, bottom, left) */
+    font-size: 20px;  /* размер текста */
+    display: block;  /* делаем поле блочным */
+    resize: none;  /* запрещаем менять размер полю (растягивать) */
+}

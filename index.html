@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header"> <!-- шапка -->
+        <h1>Шифрование текстовых сообщений</h1> <!-- заголовок -->
+        <button class="btn">Тема 🌞</button> <!-- кнопка меняющая тему -->
+    </header>
+    
+    <main class="main"> <!-- основа -->
+
+        <section class="description"> <!-- секция 1 (описание и статус) -->
+
+            <div class="description__title"> <!-- блок с заголовком секции -->
+                <h2>Описание</h2>
+            </div>
+
+            <h3>Поддерживается:</h3>
+            <ul> <!-- список того что поддерживается при вводе текстовых сообщений в поле -->
+                <li>Русский или английский алфавит → только один</li>
+                <li>Цифры и знаки → остаются без изменений</li>
+                <li>Регистр → сохраняется</li>
+            </ul>
+
+            <h3>О шифрах:</h3>
+            <ul> <!-- список с работой шифров -->
+                <li>Шифр Цезаря: сдвиг букв по алфавиту. (Пример: А→D при сдвиге 3)</li>
+                <li>Шифр Атбаш: зеркальное отображение алфавита. (Примеры: А↔Я, Б↔Ю, В↔Э)</li>
+            </ul>
+
+            <p>Статус: ✅ Готов к работе</p>
+
+        </section>
+
+        <section class="control"> <!-- секция 2 (выбор шифра, выбор языка, работа с текстовым сообщением) -->
+
+            <div class="control__title"> <!-- блок с заголовком секции -->
+                <h2>Управление</h2>
+            </div>
+
+            <div class="control__container"> <!-- контейнер (нужен чтобы элементы распологались блочно) -->
+                <!-- радио кнопки выбора языка -->
+                <input id="Russian" type="radio" name="language" value="ru"> <!-- русский язык -->
+                <label for="Russian">Русский язык</label> <!-- связывает label с input -->
+
+                <input id="English" type="radio" name="language" value="en"> <!-- английский язык -->
+                <label for="English">Английский язык</label> <!-- связывает label с input -->
+            </div>
+
+            <!-- выпадающий список с выбором шифра -->
+            <select>
+                <option value="">Выберите шифр</option>
+                <option value="Цезарь">Шифр Цезарь</option>
+                <option value="Атбаш">Шифр Атбаш</option>
+            </select>
+
+            <textarea class="control__text-input-field" placeholder="Введите текст" disabled></textarea> <!-- поле для ввода текстовых сообщений -->
+
+            <input id="uploadFile" type="file" style="display: none;"> <!-- кнопка для выбора файла (скрыта) -->
+            <button class="btn">📂 Загрузить файл</button>
+
+            <button class="btn">🔒 Зашифровать</button> <!-- кнопка для шифрования текстовых сообщений -->
+            <button class="btn">🔓 Расшифровать</button> <!-- кнопка для расшифрования текстовых сообщений -->
+
+        </section>
+
+        <section class="result"> <!-- секция 3 (результат) -->
+
+            <div class="result__title"> <!-- блок с заголовком секции -->
+                <h2>Результат</h2>
+            </div>
+
+            <textarea class="result__text-output-field" placeholder="Результат" readonly></textarea> <!-- поле для вывода (зашифрованных или расшифрованных) текстовых сообщений -->
+
+            <button class="btn">📂 Сохранить в файл</button> <!-- кнопка сохранения данных в файл -->
+
+        </section>
+
+    </main>
+</body>
+</html>
