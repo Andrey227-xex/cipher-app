@@ -1,4 +1,4 @@
-@media (max-width: 480px) {
+@media (max-width: 728px) {
 
     /* стили для шапки */
     .header {
@@ -13,5 +13,16 @@
     /* стили для секций */
     .description, .control, .result {
         width: 100%;  /* секции растягиваются на всю ширину */
-    } 
+    }
+
+    
+    .control__text-input-field,
+    .result__text-output-field {
+        width: 98.5%;
+    }
+    
+    .btn {
+        margin: 5px;
+        padding: 8px;
+    }
 }
