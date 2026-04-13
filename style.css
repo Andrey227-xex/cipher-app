@@ -99,8 +99,8 @@ body {
 
 /* стили для поля ввода текста в секции c управлением */
 .control__text-input-field {
-    width: 98%;
-    height: 140px;
+    width: 97%;
+    height: 190px;
     margin: 100px 0px 20px 0px; 
     font-size: 20px;
     border: 1px solid  var(--border-color);
@@ -152,8 +152,8 @@ body {
 
 /* стили для поля вывода в секции с результатом */
 .result__text-output-field {
-    width: 98%;
-    height: 140px;
+    width: 97%;
+    height: 190px;
     margin: 20px 0px 10px 0px; 
     border: 1px solid  var(--border-color);
     background-color: var(--elem-bg-color);
