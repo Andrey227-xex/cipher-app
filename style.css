@@ -47,7 +47,6 @@ body {
 /* стили для основы */
 .main {
     max-width: 1820px;
-    width: 100%;
     margin-top: 10px;
     display: flex;
     gap: 5px
@@ -94,9 +93,11 @@ body {
 
 /* стили для выпадающего списка в секции с управлением */
 .control__select {
+    margin-top: 20px;
     border: 1px solid var(--border-color);
     background-color: var(--elem-bg-color);
     color: var(--text-color);
+    cursor: pointer;
 }
 
 
@@ -111,6 +112,8 @@ body {
     color: var(--text-color);
     display: block;
     resize: none;  /* запрещаем менять размер полю (растягивать) */
+    cursor: text;
+
 }
 
 
@@ -120,7 +123,7 @@ body {
 }
 
 
-/* стили для кнопки шифрования в секции с управлением */
+/* стили для кнопок (общие настройки) */
 .btn {
     padding: 5px;
     border: 1px solid var(--border-color);
@@ -158,7 +161,7 @@ body {
 /* стили для поля вывода в секции с результатом */
 .result__text-output-field {
     width: 100%;
-    margin: 20px 0 10px 0;
+    margin: 20px 0 20px 0;
     height: 190px;
     border: 1px solid var(--border-color);
     background-color: var(--elem-bg-color);

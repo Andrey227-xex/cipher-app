@@ -7,6 +7,7 @@
 
     /* стили для основы */
     .main {
+        width: 100%;
         flex-direction: column;  /* расположение секций по вертикали */
     }
 
@@ -15,9 +16,14 @@
         width: 100%;  /* секции растягиваются на всю ширину */
     }
     
-    
+    /* стили для кнопок */
     .btn {
         margin-bottom: 5px;
         padding: 8px;
+    }
+
+    .encrypt-it, .decrypt, .download {
+        width: 50%;
+        display: block;
     }
 }
