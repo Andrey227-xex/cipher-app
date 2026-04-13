@@ -14,15 +14,10 @@
     .description, .control, .result {
         width: 100%;  /* секции растягиваются на всю ширину */
     }
-
     
-    .control__text-input-field,
-    .result__text-output-field {
-        width: 98.5%;
-    }
     
     .btn {
-        margin: 5px;
+        margin-bottom: 5px;
         padding: 8px;
     }
 }
