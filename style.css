@@ -47,6 +47,7 @@ body {
 /* стили для основы */
 .main {
     max-width: 1820px;
+    min-height: 500px;
     margin-top: 10px;
     display: flex;
     gap: 5px

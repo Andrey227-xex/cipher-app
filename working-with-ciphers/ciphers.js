@@ -11,7 +11,7 @@ function caesarCipher() {
         alphabetShiftField.setAttribute("type", "number"); // добавляю атрибут тип поля (ввод только чисел)
         alphabetShiftField.setAttribute("id", "alphabetShiftField"); // добавляю id
         alphabetShiftField.setAttribute("class", "alphabet-shift-field"); // добавляю class
-        alphabetShiftField.setAttribute("placeholder", "Введите сдвиг"); // добавляю атрибут подсказку
+        alphabetShiftField.setAttribute("placeholder", "Введите сдвиг (1-32)"); // добавляю атрибут подсказку
 
 
         const buttonSave = document.createElement("button"); // создаем кнопку сохранения сдвига

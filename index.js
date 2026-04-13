@@ -72,8 +72,13 @@ btnEncryptIt.addEventListener("click", () => {
     }
 
     // если выбран шифр Атбаш
-    if (settings.type === "Атбаш") {
+    else if (settings.type === "Атбаш") {
         encryptAndDecryptAtbash();
+    }
+
+    // шифр не выбран
+    else {
+        alert("Выберите шифр!");
     }
 });
 
@@ -89,8 +94,13 @@ btnDecrypt.addEventListener("click", () => {
     }
 
     // если выбран шифр Атбаш
-    if (settings.type === "Атбаш") {
+    else if (settings.type === "Атбаш") {
         encryptAndDecryptAtbash();
+    }
+
+    // шифр не выбран
+    else {
+        alert("Выберите шифр!");
     }
 })
 
