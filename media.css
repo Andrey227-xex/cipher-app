@@ -22,6 +22,7 @@
         padding: 8px;
     }
 
+    /* стили для кнопок: зашифровать, расшифровать и загрузить */
     .encrypt-it, .decrypt, .download {
         width: 50%;
         display: block;
