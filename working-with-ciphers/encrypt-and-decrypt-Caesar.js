@@ -92,7 +92,10 @@ function encryptingTheDesiredAlphabet(symbol, alphabet) {
 // функция расшифрования нужного алфавита
 function decodingTheDesiredAlphabet(symbol, alphabet) {
     const index = alphabet.indexOf(symbol.toLowerCase()); // индекс буквы в алфавите
-    const newIndex = (index - settings.shift + alphabet.length) % alphabet.length; // индекс буквы со сдвигом
+    let newIndex = (index - settings.shift) % alphabet.length; // индекс буквы со сдвигом
+
+    // если получился отрицательный индекс, то прибавляем длину алфавита
+    if (newIndex < 0) newIndex += alphabet.length;
 
     if (symbol === symbol.toUpperCase()) {
         settings.encryptedText += alphabet[newIndex].toUpperCase(); // добавляем расшифрованную ЗАГЛАВНУЮ букву
