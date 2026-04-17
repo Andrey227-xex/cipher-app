@@ -29,6 +29,7 @@ function caesarCipher() {
 
     textInput.setAttribute("disabled", true); // запрещаем вводить текст (пока пользователь не введ корректный сдвиг)
     settings.type = "Цезарь"; // обновляем настройку тип шифра - Цезарь
+    textInput.placeholder = "⚠️ Введите корректный сдвиг и сохраните его"; // обновляем подсказку
     status.textContent = "Статус: ✅ Выбран шифр Цезаря"; // обновляю статус
 }
 
@@ -40,6 +41,7 @@ function save() {
     if (alphabetShiftField.value !== "" && (alphabetShiftField.value > 0 && alphabetShiftField.value < 33)) {
         settings.shift = Number(alphabetShiftField.value); // обновляем настройку сдвига алфавита
         textInput.removeAttribute("disabled"); // разрешаем вводить текст
+        textInput.placeholder = "Введите текст"; // обновляем подсказку
         status.textContent = "Статус: ✅ Сдвиг сохранён"; // обновляю статус
     }
 
@@ -47,6 +49,7 @@ function save() {
         settings.shift = 0; // сброс
         alert("Некорректный сдвиг (должен быть от 1 до 32)"); // неверный ввод
         textInput.setAttribute("disabled", true); // запрещаем вводить текст
+        textInput.placeholder = "⚠️ Введите корректный сдвиг и сохраните его"; // обновляем подсказку
         status.textContent = "Статус: ❌ Сдвиг не сохранён (он сбросился)"; // обновляем статус
         }
 }
@@ -66,9 +69,10 @@ function atbashCipher() {
 
         settings.alphabetShiftField = false; // обновляем настройку на false (поле удалено)
     }
-
+    
     textInput.removeAttribute("disabled"); // разрешаем вводить текст
     settings.type = "Атбаш"; // обновляем настройку тип шифра - Атбаш
+    textInput.placeholder = "Введите текст"; // обновляем подсказку
     status.textContent = "Статус: ✅ Выбран шифр Атбаш"; // обновляем статус
 }
 

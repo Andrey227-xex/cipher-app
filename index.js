@@ -106,7 +106,7 @@ btnDecrypt.addEventListener("click", () => {
 
 
 // добавляем обработчик кнопке сохранить в файл
-btnSaveToFile.addEventListener("click", writingToFile)
+btnSaveToFile.addEventListener("click", writingToFile);
 
 
 // функция где задаются начальные настройки и хранятся данные
